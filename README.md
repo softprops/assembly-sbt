@@ -24,7 +24,7 @@ How To Use
 
     class Plugins(info: sbt.ProjectInfo) extends sbt.PluginDefinition(info) {
       val codaRepo = "Coda Hale's Repository" at "http://repo.codahale.com/"
-      val assemblySBT = "com.codahale" % "assembly-sbt" % "0.1-SNAPSHOT"
+      val assemblySBT = "com.codahale" % "assembly-sbt" % "0.1"
     }
 
 (You may need to check this project's tags to see what the most recent release
