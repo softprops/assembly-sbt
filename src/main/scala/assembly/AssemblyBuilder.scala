@@ -12,7 +12,7 @@ trait AssemblyBuilder extends sbt.BasicScalaProject {
       (base / "META-INF" / "services" ** "*") --- // include all service providers
       (base / "META-INF" / "maven" ** "*") // include all Maven POMs and such
   def assemblyOutputPath = outputPath / assemblyJarName
-  def assemblyJarName = name + "-assembly-" + this.version + ".jar"
+  def assemblyJarName = (name + "-assembly-" + this.version + ".jar").trim.replace(" ", "-")
   def assemblyTemporaryPath = outputPath / "assembly-libs"
   def assemblyClasspath = runClasspath
   def assemblyExtraJars = mainDependencies.scalaJars
